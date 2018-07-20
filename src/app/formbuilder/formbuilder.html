@@ -1,0 +1,33 @@
+<div [formGroup]='form' style='width: 100%;'>
+    <div class='ui-g' *ngFor='let item of jsonData;' style='float: left; clear: both;'>
+        
+        <div class='ui-g-12 ui-sm-12'>
+            <span *ngIf='item.type == "input"' class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText formControlName='{{item.field}}'>
+                <label for="float-input">{{item.question}}</label>
+            </span>
+        </div>
+        <div class='ui-g-12 ui-sm-12'>
+            <span *ngIf='item.type == "check"'>
+                <p-checkbox name="{{item.field}}" [binary]='true'  formControlName="{{item.field}}"></p-checkbox>
+                <label for="{{item.field}}">{{item.question}}</label>
+            </span>
+        </div>
+        <div class='ui-g-12 ui-sm-12'>
+            <span *ngIf='item.type == "radio"'>
+                <p-radioButton name="{{item.field}}" value="1" formControlName="{{item.field}}" label='Yes'></p-radioButton>
+                <p-radioButton name="{{item.field}}" value="0" formControlName="{{item.field}}" label='No'></p-radioButton>
+                <label for="{{item.field}}">{{item.question}}</label>
+            </span>
+        </div>
+
+        <!-- Subform element -->
+        <div class='ui-g-12 ui-sm-12' *ngIf='item.subquestion && item.value'>
+            <span class="ui-float-label">
+                <input id="float-input" type="text" size="30" pInputText formControlName='{{item.subquestion.field}}'>
+                <label for="float-input">{{item.subquestion.question}}</label>
+            </span>
+        </div>
+        <!-- end subform element -->
+    </div>
+</div>
