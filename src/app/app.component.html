@@ -1,11 +1,16 @@
 <div class='ui-g'>
-  <div class='ui-g-12'>
+  <div class='ui-g-6'>
     <mig-formbuilder *ngIf='loaded' [jsonData]='jsonData' [form]='UnderwritingFormGroup'></mig-formbuilder>
+  </div>
+  <div class='ui-g-6'>
+<pre>
+{{jsonData | json}}
+</pre>
   </div>
 </div>
 <div class='ui-g'>
   <div class='ui-g-12'>
-    <button (click)='showData()'>Show Data</button>
+    <button (click)='showData()'>Valid / Invalid ?</button>
     {{status}}
   </div>
 </div>

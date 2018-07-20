@@ -1,14 +1,12 @@
 [{
     "question": "Is the sun yellow?",
     "type": "radio",
-    "sub": "no",
     "field": "sun",
     "required": "true",
     "value": "0"
 },
 {   "question": "How many cards in a deck?",
     "type": "input",
-    "sub": "no",
     "field": "cards",
     "required": "true",
     "value": ""
@@ -16,16 +14,20 @@
 {
     "question": "Is today monday?",
     "type": "check",
-    "sub": "yes",
     "field": "isitmonday",
     "required": "true",
     "value": "",
-    "subquestion": {
-        "question": "What day is it?",
+    "subquestion": [{
+        "question": "1st sub question What day is it?",
         "type": "input",
-        "sub": "no",
         "field": "whatdayisit",
         "required": "false",
         "value": ""
-    }
+    }, {
+        "question": "2nd sub question What month is it?",
+        "type": "input",
+        "field": "whatmonthisit",
+        "required": "false",
+        "value": ""
+    }]
 }]

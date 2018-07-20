@@ -25,7 +25,6 @@ export class UnderwritingService {
 export interface Underwriting {
     question;
     type;
-    sub;
     field;
     required;
     value;

@@ -39,9 +39,8 @@ export class AppComponent {
 
   ngOnInit() {
     console.log("ngoninit");
-    this.UnderwritingFormGroup.valueChanges.debounceTime(100).subscribe(data => {
-      console.log(data);
-      
-    });
+    // this.UnderwritingFormGroup.valueChanges.debounceTime(100).subscribe(data => {
+    //   console.log(data);
+    // });
   }
 }
