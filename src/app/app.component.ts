@@ -13,10 +13,10 @@ export class AppComponent {
   UnderwritingFormGroup: FormGroup;
   // formBuilder: FormBuilder;
   jsonData: Underwriting[];
-
+ 
   loaded: boolean = false;
   status: any;
-
+ 
   constructor(
     public underwritingService: UnderwritingService,
     public formBuilder: FormBuilder
