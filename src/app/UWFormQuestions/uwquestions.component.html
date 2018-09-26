@@ -61,6 +61,14 @@
                         <p-dropdown [options]='ques.OPTIONS' formControlName='{{ques.ID}}'></p-dropdown>
                       </span>
 
+                      <!-- radio question type -->
+                      <span *ngIf='ques.ELEMENTTYPE == "RADIO"' style='clear: both;'>
+                        <label for='{{ques.ID}}'> {{ques.QUESTION}} - {{ques.ID}} </label><br>
+                        <div *ngFor='let opt of ques.OPTIONS'>
+                          <div class="ui-g-12"><p-radioButton name="{{ques.ID}}" value={{opt.value}} formControlName="{{ques.ID}}" label={{opt.label}}></p-radioButton></div>
+                        </div>
+                      </span>
+
                   </div>
 
               </div>

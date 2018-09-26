@@ -272,6 +272,22 @@
 						{ "label": "Umbrella", "value": "CUP"}
 					  ],
 					"SUBQUESTIONS": []
+				},
+				{
+					"ID": 139,
+					"QUESTION": "HAVE ANY CRIMES OCCURRED OR BEEN ATTEMPTED ON YOUR ?",
+					"ORDER": 139,
+					"ELEMENTTYPE": "RADIO",
+					"ANSWER": "",
+					"RULE": "",
+					"REQUIRED":"Y",
+					"DATATYPE": "A",
+					"DATALENGTH": 1,
+					"OPTIONS": [
+						{ "label": "Yes", "value": "Y"},
+		  				{ "label": "No", "value": "N"}
+					  ],
+					"SUBQUESTIONS": []
 				}
 			]
 		}

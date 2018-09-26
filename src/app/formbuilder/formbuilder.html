@@ -16,7 +16,7 @@
     <div class='ui-g-12 ui-sm-12'>
       <span *ngIf='item.type == "radio"'>
 			<label for="{{item.field}}">{{item.question}}</label><br>
-		<p-radioButton name="{{item.field}}" value="1" formControlName="{{item.field}}" label='Yes'></p-radioButton>
+		    <p-radioButton name="{{item.field}}" value="1" formControlName="{{item.field}}" label='Yes'></p-radioButton>
         <p-radioButton name="{{item.field}}" value="0" formControlName="{{item.field}}" label='No'></p-radioButton>
         
       </span>
