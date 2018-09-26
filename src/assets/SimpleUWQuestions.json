@@ -1,0 +1,152 @@
+[
+	{
+		"ID": 5,
+		"QUESTION": "Largest job completed in the last 12 months.:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": "250000",
+		"DATATYPE": "N",
+		"DATALENGTH": 25
+	},
+	{
+		"ID": 14,
+		"QUESTION": "SUBSIDIARY COMPANY NAME:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": true,
+		"DATATYPE": "A",
+		"DATALENGTH": 25
+	},
+	{
+		"ID": 15,
+		"QUESTION": "% OWNED:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": true,
+		"DATATYPE": "A",
+		"DATALENGTH": 25
+	},
+	{
+		"ID": 26,
+		"QUESTION": "DATE OF OCCURRENCE:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": "1",
+		"DATATYPE": "A",
+		"DATALENGTH": 25
+	},
+	{
+		"ID": 27,
+		"QUESTION": "LINE:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": "1",
+		"DATATYPE": "A",
+		"DATALENGTH": 25
+	},
+	{
+		"ID": 28,
+		"QUESTION": "TYPE / DESCRIPTION OF OCCURRENCE OR CLAIM:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": "1",
+		"DATATYPE": "A",
+		"DATALENGTH": 25
+	},
+	{
+		"ID": 29,
+		"QUESTION": "AMOUNT PAID:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": "1",
+		"DATATYPE": "A",
+		"DATALENGTH": 25
+	},
+	{
+		"ID": 30,
+		"QUESTION": "AMOUNT RESERVED:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": "1",
+		"DATATYPE": "A",
+		"DATALENGTH": 25
+	},
+	{
+		"ID": 31,
+		"QUESTION": "SUBROGATION Y/N:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": "1",
+		"DATATYPE": "A",
+		"DATALENGTH": 25
+	},
+	{
+		"ID": 32,
+		"QUESTION": "CLAIM OPEN Y/N:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": "1",
+		"DATATYPE": "A",
+		"DATALENGTH": 25
+	},
+	{
+		"ID": 87,
+		"QUESTION": "EQUIPMENT:",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": true,
+		"DATATYPE": "A",
+		"DATALENGTH": 12
+	},
+	{
+		"ID": 88,
+		"QUESTION": "TYPE OF EQUIPMENT?",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": true,
+		"DATATYPE": "A",
+		"DATALENGTH": 12
+	},
+	{
+		"ID": 89,
+		"QUESTION": "SMALL TOOLS?",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": true,
+		"DATATYPE": "A",
+		"DATALENGTH": 12
+	},
+	{
+		"ID": 90,
+		"QUESTION": "LARGE EQUIPMENT?",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": true,
+		"DATATYPE": "A",
+		"DATALENGTH": 12
+	},
+	{
+		"ID": 91,
+		"QUESTION": "INSTRUCTION GIVEN? (Y/N)",
+		"ORDER": 1,
+		"ELEMENTTYPE": "TEXT",
+		"ANSWER": "",
+		"RULE": true,
+		"DATATYPE": "A",
+		"DATALENGTH": 12
+	}
+]

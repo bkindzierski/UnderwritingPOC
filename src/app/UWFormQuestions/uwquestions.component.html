@@ -1,0 +1,84 @@
+
+<div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+  
+      <div *ngFor='let item of qaData.UWQUESTIONS;' class="form-row">
+          <p> <strong>Category: </strong>{{ item.CATEGORY }} </p>
+              <div class='form-row' *ngFor='let ques of item.QUESTIONS;'>
+
+                  <div class='ui-g-12 ui-sm-12' >
+                      
+                      <span *ngIf='ques.ELEMENTTYPE == "TEXT"' style='clear: both;'>
+                        <!-- TEXT questions -->
+                        <label>{{ ques.QUESTION }} - {{ques.ID}}</label><br>
+                        <input type="text" size="55" pInputText formControlName='{{ques.ID}}'>
+                        
+                        <!-- TEXT subquestions -->
+                        <!-- <div  *ngIf='ques.SUBQUESTIONS' [ngClass]="this.valid == ques.ID ? 'subQuesShow' : 'subQuesHideSpaces'"> -->
+                        <div  *ngIf='ques.SUBQUESTIONS' [ngClass]="ques.FORMSTATUS ? 'subQuesShow' : 'subQuesHideSpaces'">
+                          <div *ngFor='let textsub of ques.SUBQUESTIONS;'>  
+                            <div class='ui-g'>
+                                <div class='ui-g-1'></div>
+                                <div class='ui-g-11' style='padding-top: 17px'>
+                                  <!-- <span class="ui-float-label" *ngIf='this.valid == ques.ID'> -->
+                                  <span class="ui-float-label" *ngIf='ques.FORMSTATUS'>
+                                    <input name="{{textsub.ID}}" type="text" size="45" pInputText formControlName='{{textsub.ID}}'>
+                                    <label>{{textsub.QUESTION}}</label>
+                                  </span>
+                                </div>
+                            </div>
+                          </div><!-- end *ngFor subquestions-->
+                        </div><!-- end *ngIf subquestions-->
+
+                      </span>                         
+                      
+                      <!-- select question type -->
+                      <span *ngIf='ques.ELEMENTTYPE == "SELECT"' style='clear: both;'>
+                        <!-- SELECT questions -->
+                        <p-checkbox name="{{ques.ID}}" [binary]='true' formControlName='{{ques.ID}}'></p-checkbox>
+                        <label for="{{ques.ID}}"> {{ques.QUESTION}} - {{ques.ID}} </label>
+                        <!-- SELECT subquestions -->
+                        <div  *ngIf='ques.SUBQUESTIONS' [ngClass]="ques.ANSWER==true ? 'subQuesShow' : 'subQuesHideSpaces'">
+                          <div *ngFor='let selectsub of ques.SUBQUESTIONS;'>                           
+                            <div class='ui-g' >
+                                <div class='ui-g-1'></div>
+                                <div class='ui-g-11' style='padding-top: 15px'>                                  
+                                  <span class="ui-float-label" *ngIf="ques.ANSWER==true">
+                                    <input id="{{selectsub.ID}}" name="{{selectsub.ID}}" type="text" size="30" pInputText formControlName='{{selectsub.ID}}'>
+                                    <label for="{{selectsub.ID}}">{{selectsub.QUESTION}}</label>
+                                  </span>
+
+                                </div>
+                            </div>
+                          </div><!-- end *ngFor subquestions-->
+                        </div><!-- end *ngIf subquestions-->
+
+                      </span>
+
+                      <!-- drop down question type -->
+                      <span *ngIf='ques.ELEMENTTYPE == "DROPDOWN"' style='clear: both;'>
+                        <label for='{{ques.ID}}'> {{ques.QUESTION}} - {{ques.ID}} </label><br>
+                        <p-dropdown [options]='ques.OPTIONS' formControlName='{{ques.ID}}'></p-dropdown>
+                      </span>
+
+                  </div>
+
+              </div>
+              <div class='ui-g-12' style='padding-top: 15px'></div><hr>
+      </div>
+
+      <div class="form-row">
+        <p-button type="submit" label="Save" ></p-button>
+        <!-- <button type="submit" [disabled]="!form.valid">Save</button> -->
+        <p-button type="reset" label="Reset" ></p-button>
+        <!-- <button type="reset" value="Reset">Reset</button> -->
+      </div>
+
+    </form>   
+  </div>
+
+  <div  class='ui-g-6' style="padding-top: 25px">
+    <div *ngIf="payLoad" class="form-row">
+        <strong>Saved the following values</strong><br>{{payLoad}}
+    </div>
+</div>

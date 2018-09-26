@@ -1,0 +1,18 @@
+
+p {
+    /* color: red; */
+    /* This is a single-line comment */
+    /* text-align: center; */
+}
+
+.center {
+    text-align: center;
+    color: red;
+}
+
+.subQuesHideSpaces{
+    display: none;
+}
+.subQuesShow{
+    display: block;
+}
