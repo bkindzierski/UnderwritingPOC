@@ -7,29 +7,16 @@
         <label for="float-input">{{item.question}}</label>
       </span>
     </div>
-<<<<<<< HEAD
-   
-    <div >
-=======
     <div class='ui-g-12 ui-sm-12'>
->>>>>>> 7de569ddcbcadb7279940fb7f73a844bb96f78f4
       <span *ngIf='item.type == "check"'>
         <p-checkbox name="{{item.field}}" [binary]='true' formControlName="{{item.field}}"></p-checkbox>
         <label for="{{item.field}}">{{item.question}}</label>
       </span>
     </div>
-<<<<<<< HEAD
-   
-    <div >
-      <span *ngIf='item.type == "radio"'>
-			<label for="{{item.field}}">{{item.question}}</label><br>
-		    <p-radioButton name="{{item.field}}" value="1" formControlName="{{item.field}}" label='Yes'></p-radioButton>
-=======
     <div class='ui-g-12 ui-sm-12'>
       <span *ngIf='item.type == "radio"'>
 			<label for="{{item.field}}">{{item.question}}</label><br>
 		<p-radioButton name="{{item.field}}" value="1" formControlName="{{item.field}}" label='Yes'></p-radioButton>
->>>>>>> 7de569ddcbcadb7279940fb7f73a844bb96f78f4
         <p-radioButton name="{{item.field}}" value="0" formControlName="{{item.field}}" label='No'></p-radioButton>
         
       </span>

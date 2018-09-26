@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 
 import { UnderWritingQARoot } from '../classes/UnderWritingQARoot';
-import { isNgTemplate } from '@angular/compiler';
+
 
 
 @Component({

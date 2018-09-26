@@ -41,10 +41,7 @@ export class FormBuilderComponent {
 
 
 			for (let i = 0; i < this.jsonData.length; i++) {
-<<<<<<< HEAD
-				
-=======
->>>>>>> 7de569ddcbcadb7279940fb7f73a844bb96f78f4
+
 				for (let oo = 0; oo < formDataKey.length; oo++) {
 					if (this.jsonData[i].field == formDataKey[oo]) { this.jsonData[i].value = formData[formDataKey[oo]]; }
 				}
@@ -57,10 +54,7 @@ export class FormBuilderComponent {
 					}
 				}
 			}
-<<<<<<< HEAD
 
-=======
->>>>>>> 7de569ddcbcadb7279940fb7f73a844bb96f78f4
 		});
 	}
 
