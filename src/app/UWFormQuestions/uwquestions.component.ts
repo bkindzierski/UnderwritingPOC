@@ -63,7 +63,7 @@ export class UwquestionsComponent implements OnInit {
                 //   q.ANSWER = formData[q.ID];
                 //   s.ANSWER = formData[s.ID];
                 //}
-
+ 
                 //TEXT TYPE
                 if(q.ELEMENTTYPE == 'TEXT')
                 {
