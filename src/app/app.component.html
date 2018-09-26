@@ -1,20 +1,56 @@
-<div class='ui-g'>
-  <div class='ui-g-6'>
-    <!-- <mig-formbuilder *ngIf='loaded' [jsonData]='jsonData' [form]='UnderwritingFormGroup'></mig-formbuilder> -->
-    <app-uwquestions *ngIf='loaded' [qaData]='qaData' [form]='UnderwritingFormGroup'></app-uwquestions>
-  </div>
-  <div class='ui-g-6'>
 
+<nav class="navbar navbar-inverse navbar-fixed-top" style='background-color: #428bca'>
+    <div class="container-fluid">
+        <div class="navbar-default">
+
+            <a class="navbar-brand" href="#">Underwriting Questions</a>
+      
+            <a class="navbar-brand" [routerLink]="['/Categories']">Categories</a>
+
+            <!-- <ul class='nav navbar-nav'>
+              <li>
+                <a [routerLink]="['/BusinessClassSelection']">Categories</a>
+              </li>
+            </ul> -->
+          </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+      
+    <!-- <div class="col-sm-3 col-md-2 sidebar" style="margin-top: 55px;">
+        <ul >
+            <li class="active">
+              <a href="#" style="color: black">Categories</a>
+            </li>
+        </ul>
+    </div> -->
+   
+    <!-- BODY -->
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" style="margin-top: 55px;">
+        <div class='ui-g'>
+          <div class='ui-g-6'>
+            <app-uwquestions *ngIf='loaded' [qaData]='qaData' [form]='UnderwritingFormGroup'></app-uwquestions>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    
+       
 
   </div>
 </div>
-<div class='ui-g'>
+
+
+
+<!-- <div class='ui-g'>
   <div class='ui-g-12'>
-      <!-- <pre>
+       <pre>
           {{qaData | json}}
       </pre> -->
     <!-- <button (click)='showData()'>Valid / Invalid ?</button>
-    {{status}} -->
+    {{status}}
   </div>
-</div> 
+</div>  -->
  

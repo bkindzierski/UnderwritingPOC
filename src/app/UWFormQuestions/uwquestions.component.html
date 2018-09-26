@@ -4,11 +4,10 @@
   
       <div *ngFor='let item of qaData.UWQUESTIONS;' class="form-row">
           <p> <strong>Category: </strong>{{ item.CATEGORY }} </p>
-              <div class='form-row' *ngFor='let ques of item.QUESTIONS;'>
-
+              <div class='form-row' *ngFor="let ques of item.QUESTIONS; let idx = index;" >
                   <div class='ui-g-12 ui-sm-12' >
-                      
-                      <span *ngIf='ques.ELEMENTTYPE == "TEXT"' style='clear: both;'>
+                    {{idx +1}}.                      
+                    <span *ngIf='ques.ELEMENTTYPE == "TEXT"' style='clear: both;'>                        
                         <!-- TEXT questions -->
                         <label>{{ ques.QUESTION }} - {{ques.ID}}</label><br>
                         <input type="text" size="55" pInputText formControlName='{{ques.ID}}'>

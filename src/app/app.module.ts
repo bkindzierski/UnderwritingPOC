@@ -1,5 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+
 import { UnderwritingService } from './underwriting.service';
 
 import { AppComponent } from './app.component';
@@ -15,13 +19,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormBuilderComponent } from './formbuilder/formbuilder';
 import { UwquestionsComponent } from './UWFormQuestions/uwquestions.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FormBuilderComponent,
-    UwquestionsComponent
+    UwquestionsComponent,
+    CategoriesComponent
 
   ],
   imports: [
@@ -34,7 +40,8 @@ import { UwquestionsComponent } from './UWFormQuestions/uwquestions.component';
     RadioButtonModule,
     DropdownModule,
     ButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
 
   ],
   providers: [UnderwritingService],
