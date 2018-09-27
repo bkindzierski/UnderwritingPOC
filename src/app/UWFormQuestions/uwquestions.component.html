@@ -89,7 +89,8 @@
       </div>
       
       <div class="form-row">
-        <p-button type="submit" label="Save" ></p-button>
+        <p-button type="submit" label="Save" diabled *ngIf='form.valid'></p-button>
+        <p-button type="submit" label="Save" disabled='true' *ngIf='!form.valid'></p-button>
         <!-- <button type="submit" [disabled]="!form.valid">Save</button> -->
         <p-button type="reset" label="Reset" ></p-button>
         <!-- <button type="reset" value="Reset">Reset</button> -->
