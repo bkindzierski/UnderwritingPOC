@@ -100,7 +100,7 @@
 					"ELEMENTTYPE": "TEXT",
 					"ANSWER": "",
 					"RULE": "1",
-					"REQUIRED":"N",
+					"REQUIRED":"Y",
 					"FORMSTATUS":"",
 					"DATATYPE": "A",
 					"DATALENGTH": 25,

@@ -14,10 +14,11 @@
                         <!-- <div [ngClass]="{'has-error': (ques.ID.touched || ques.ID.dirty) && !ques.ID.valid }"></div> -->
                         
                         <label>{{ ques.QUESTION }} - {{ques.ID}}</label>
-                        <label *ngIf='(form.controls[ques.ID].touched || form.controls[ques.ID].dirty) && !form.controls[ques.ID].valid' style='color: red'>&nbsp;* required</label>
+                        <!-- <label *ngIf='(form.controls[ques.ID].touched || form.controls[ques.ID].dirty) && !form.controls[ques.ID].valid' style='color: red'>&nbsp;* required</label> -->
                         <br>
-                        <!-- <input type="text" size="55" pInputText formControlName='{{ques.ID}}' [ngClass]="form.controls[ques.ID].valid ? 'error' : ''"> -->
-                        <input type="text" size="55" pInputText formControlName='{{ques.ID}}'>
+                        <input type="text" size="55" pInputText formControlName='{{ques.ID}}' 
+                              [ngClass]="(form.controls[ques.ID].touched || form.controls[ques.ID].dirty) && !form.controls[ques.ID].valid ? 'error' : ''">
+                        <!-- <input type="text" size="55" pInputText formControlName='{{ques.ID}}'> -->
                         
                         <!-- TEXT subquestions -->
                         <!-- <div  *ngIf='ques.SUBQUESTIONS' [ngClass]="this.valid == ques.ID ? 'subQuesShow' : 'subQuesHideSpaces'"> -->
