@@ -16,3 +16,23 @@ p {
 .subQuesShow{
     display: block;
 }
+
+.defaultInput
+    {
+     width: 100px;
+     height:25px;
+     padding: 5px;
+    }
+
+.error
+{
+ border:1px solid red;
+}
+
+/* input:invalid {
+    background-color: #ffdddd;
+  }
+  
+form:invalid {
+    border: 5px solid #ffdddd;
+  } */

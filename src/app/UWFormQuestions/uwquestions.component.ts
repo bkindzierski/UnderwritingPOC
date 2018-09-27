@@ -15,9 +15,9 @@ export class UwquestionsComponent implements OnInit {
   @Input() qaData: UnderWritingQARoot;
   @Input() form: FormGroup;
   
-  valid=0;
-  evaluated;
+  valid=0;  
   payLoad = '';
+  evaluated;
   keepgoing:boolean;
 
   constructor() { }
@@ -87,8 +87,8 @@ export class UwquestionsComponent implements OnInit {
     });//end subscribe
   }//end ngOnInit
 
+  //BUILD THE FORM HERE
   toFormGroup() {
-    
     // setup the form
     const formGroup = {};
 
@@ -96,23 +96,24 @@ export class UwquestionsComponent implements OnInit {
     this.qaData.UWQUESTIONS.forEach(question => {
       
       //UW category level
-      question.QUESTIONS.forEach(q=>{       
-
-        //this.form.addControl(q.ID.toString(), new FormControl(q.ANSWER));         
-        formGroup[q.ID] = new FormControl(q.ANSWER || ''), this.mapValidators(q.REQUIRED);
+      question.QUESTIONS.forEach(q=>{        
+        let validation = (q.REQUIRED =='Y')? Validators.required:Validators.nullValidator;
+        // formGroup[q.ID] = new FormControl(q.ANSWER || ''), this.mapValidators(q.REQUIRED);
+        formGroup[q.ID] = new FormControl(q.ANSWER || '', validation);
 
           //sub question level    
           q.SUBQUESTIONS.forEach(s=>{        
-            //this.form.addControl(s.ID.toString(), new FormControl(s.ANSWER));
-            formGroup[s.ID] = new FormControl(s.ANSWER || ''), this.mapValidators(s.REQUIRED);
-          });     
-
+            let subvalidation = (s.REQUIRED =='Y')? Validators.required:Validators.nullValidator;            
+            //formGroup[s.ID] = new FormControl(s.ANSWER || ''), this.mapValidators(s.REQUIRED);
+            formGroup[s.ID] = new FormControl(s.ANSWER || '', subvalidation);
+          });
       });
     }); 
 
     this.form = new FormGroup(formGroup);
   }
  
+  //
   private mapValidators(validators) {
     const formValidators = [];
   
@@ -132,6 +133,11 @@ export class UwquestionsComponent implements OnInit {
   onSubmit() {
     //this.payLoad = JSON.stringify(this.form.value);
     this.payLoad = JSON.stringify(this.qaData);
+    console.log('form control validation: ' + this.form.controls[1].valid);
+    console.log('status: ' + this.form.status);
+    console.log('dirty: ' + this.form.dirty);
+    console.log('touched: ' + this.form.touched);
+    
   }
 
 }

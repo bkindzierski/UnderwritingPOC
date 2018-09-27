@@ -48,7 +48,7 @@
 					"ELEMENTTYPE": "SELECT",
 					"ANSWER": "",
 					"RULE": "",
-					"REQUIRED":"Y",
+					"REQUIRED":"N",
 					"DATATYPE": "A",
 					"DATALENGTH": 1,
 					"SUBQUESTIONS": [
@@ -83,7 +83,7 @@
 					"ELEMENTTYPE": "SELECT",
 					"ANSWER": "",
 					"RULE": "",
-					"REQUIRED":"Y",
+					"REQUIRED":"N",
 					"DATATYPE": "A",
 					"DATALENGTH": 1,
 					"SUBQUESTIONS": []
@@ -100,7 +100,7 @@
 					"ELEMENTTYPE": "TEXT",
 					"ANSWER": "",
 					"RULE": "1",
-					"REQUIRED":"Y",
+					"REQUIRED":"N",
 					"FORMSTATUS":"",
 					"DATATYPE": "A",
 					"DATALENGTH": 25,
@@ -191,7 +191,7 @@
 					"ELEMENTTYPE": "SELECT",
 					"ANSWER": false,
 					"RULE": "",
-					"REQUIRED":"Y",
+					"REQUIRED":"N",
 					"DATATYPE": "A",
 					"DATALENGTH": 1,
 					"SUBQUESTIONS": [
@@ -259,7 +259,7 @@
 					"ELEMENTTYPE": "DROPDOWN",
 					"ANSWER": "",
 					"RULE": "",
-					"REQUIRED":"Y",
+					"REQUIRED":"N",
 					"DATATYPE": "A",
 					"DATALENGTH": 1,
 					"OPTIONS": [
@@ -280,7 +280,7 @@
 					"ELEMENTTYPE": "RADIO",
 					"ANSWER": "",
 					"RULE": "",
-					"REQUIRED":"Y",
+					"REQUIRED":"N",
 					"DATATYPE": "A",
 					"DATALENGTH": 1,
 					"OPTIONS": [

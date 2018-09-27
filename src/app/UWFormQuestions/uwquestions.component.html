@@ -8,10 +8,15 @@
           
               <div class='form-row' *ngFor="let ques of item.QUESTIONS; let idx = index;" >
                   <div class='ui-g-12 ui-sm-12' >
-                    {{idx +1}}.                      
+                    {{idx +1}}. 
                     <span *ngIf='ques.ELEMENTTYPE == "TEXT"' style='clear: both;'>                        
                         <!-- TEXT questions -->
-                        <label>{{ ques.QUESTION }} - {{ques.ID}}</label><br>
+                        <!-- <div [ngClass]="{'has-error': (ques.ID.touched || ques.ID.dirty) && !ques.ID.valid }"></div> -->
+                        
+                        <label>{{ ques.QUESTION }} - {{ques.ID}}</label>
+                        <label *ngIf='(form.controls[ques.ID].touched || form.controls[ques.ID].dirty) && !form.controls[ques.ID].valid' style='color: red'>&nbsp;* required</label>
+                        <br>
+                        <!-- <input type="text" size="55" pInputText formControlName='{{ques.ID}}' [ngClass]="form.controls[ques.ID].valid ? 'error' : ''"> -->
                         <input type="text" size="55" pInputText formControlName='{{ques.ID}}'>
                         
                         <!-- TEXT subquestions -->
@@ -71,11 +76,17 @@
                       </span>
 
                   </div>
+                  
+                  <!-- <div class="error" *ngIf="form.get(ques.ID).invalid && (form.get(ques.ID).dirty || form.get(ques.ID).touched)">
+                    <div *ngIf="form.get(ques.ID).errors.required">
+                      {{ ques.ID }} is required.
+                    </div>
+                  </div> -->
 
               </div>
               <div class='ui-g-12' style='padding-top: 15px'><hr></div>
       </div>
-
+      
       <div class="form-row">
         <p-button type="submit" label="Save" ></p-button>
         <!-- <button type="submit" [disabled]="!form.valid">Save</button> -->
@@ -88,6 +99,7 @@
 
   <div  class='ui-g-6' style="padding-top: 25px">
     <div *ngIf="payLoad" class="form-row">
+        Valid / Invalid ? {{ form.status }}<hr>
         <strong>Saved the following values</strong><br>{{payLoad}}
     </div>
 </div>
