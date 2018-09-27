@@ -134,5 +134,4 @@ export class UwquestionsComponent implements OnInit {
     this.payLoad = JSON.stringify(this.qaData);
   }
 
-
 }

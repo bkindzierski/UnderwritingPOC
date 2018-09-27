@@ -3,7 +3,9 @@
     <form (ngSubmit)="onSubmit()" [formGroup]="form">
   
       <div *ngFor='let item of qaData.UWQUESTIONS;' class="form-row">
-          <p> <strong>Category: </strong>{{ item.CATEGORY }} </p>
+          
+        <p> <strong>Category: </strong>{{ item.CATEGORY }} </p>
+          
               <div class='form-row' *ngFor="let ques of item.QUESTIONS; let idx = index;" >
                   <div class='ui-g-12 ui-sm-12' >
                     {{idx +1}}.                      
@@ -71,7 +73,7 @@
                   </div>
 
               </div>
-              <div class='ui-g-12' style='padding-top: 15px'></div><hr>
+              <div class='ui-g-12' style='padding-top: 15px'><hr></div>
       </div>
 
       <div class="form-row">
