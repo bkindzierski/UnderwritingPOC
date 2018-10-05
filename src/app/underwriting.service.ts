@@ -14,7 +14,9 @@ import { UWQUESTIONROOT } from './classes/UWQUESTIONROOT'
 export class UnderwritingService {
     
     // url: string = "./assets/UWQuestions.json";
-    url: string = "./assets/UWQuestions2.json";
+    //url: string = "./assets/UWQuestions2.json";
+    url:string = 'http://dev-net-brn.MIG.local:8083/api/GetUWQuestions/'
+
 
     constructor(private http: Http) { }
    

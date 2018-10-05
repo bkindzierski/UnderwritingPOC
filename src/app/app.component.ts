@@ -42,7 +42,7 @@ export class AppComponent {
   QAcheckData(){
     this.loaded =true;
     
-    //console.log('qaData: ' + JSON.stringify(this.qaData));
+    console.log('qaData: ' + JSON.stringify(this.qaData));
     
     // this.qaData.UWQUESTIONS.forEach(question => {
     //   console.log('CATEGORY: ' + question.CATEGORY);
