@@ -10,7 +10,7 @@ export class UWQUESTION {
     REQUIRED:string;    
     DATATYPE:number;
     DATALENGTH:number;
-    SUBQUESTIONS: UWQUESTION[];
+    SUBQUESTION: UWQUESTION[];
     OPTIONS:any[];
     FORMSTATUS:boolean;
     LAYOUT: string;

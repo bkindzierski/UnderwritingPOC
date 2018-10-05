@@ -13,7 +13,8 @@ import { UWQUESTIONROOT } from './classes/UWQUESTIONROOT'
 @Injectable()
 export class UnderwritingService {
     
-    url: string = "./assets/UWQuestions.json";
+    // url: string = "./assets/UWQuestions.json";
+    url: string = "./assets/UWQuestions2.json";
 
     constructor(private http: Http) { }
    

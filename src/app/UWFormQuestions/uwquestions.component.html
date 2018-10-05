@@ -21,8 +21,8 @@
                         <!-- <input type="text" size="55" pInputText formControlName='{{ques.ID}}'> -->
                         
                         <!-- TEXT subquestions -->
-                        <!-- <div  *ngIf='ques.SUBQUESTIONS' [ngClass]="this.valid == ques.ID ? 'subQuesShow' : 'subQuesHideSpaces'"> -->
-                        <div  *ngIf='ques.SUBQUESTIONS' [ngClass]="ques.FORMSTATUS ? 'subQuesShow' : 'subQuesHideSpaces'">
+                        <!-- <div  *ngIf='ques.SUBQUESTION' [ngClass]="this.valid == ques.ID ? 'subQuesShow' : 'subQuesHideSpaces'"> -->
+                        <div  *ngIf='ques.SUBQUESTION' [ngClass]="ques.FORMSTATUS ? 'subQuesShow' : 'subQuesHideSpaces'">
                           <div *ngFor='let textsub of ques.SUBQUESTIONS;'>  
                             <div class='ui-g'>
                                 <div class='ui-g-1'></div>
@@ -45,11 +45,16 @@
                         <p-checkbox name="{{ques.ID}}" [binary]='true' formControlName='{{ques.ID}}'></p-checkbox>
                         <label for="{{ques.ID}}"> {{ques.QUESTION}} - {{ques.ID}} </label>
                         <!-- SELECT subquestions -->
-                        <div  *ngIf='ques.SUBQUESTIONS' [ngClass]="ques.ANSWER==true ? 'subQuesShow' : 'subQuesHideSpaces'">
-                          <div *ngFor='let selectsub of ques.SUBQUESTIONS;'>                           
+                        <div  *ngIf='ques.SUBQUESTION' [ngClass]="ques.ANSWER==true ? 'subQuesShow' : 'subQuesHideSpaces'">
+                        <!-- <div  *ngIf='ques.SUBQUESTIONS' [ngClass]="ques.FORMSTATUS==true ? 'subQuesShow' : 'subQuesHideSpaces'"> -->
+                          <div *ngFor='let selectsub of ques.SUBQUESTION;'>                           
                             <div class='ui-g' >
                                 <div class='ui-g-1'></div>
-                                <div class='ui-g-11' style='padding-top: 15px'>                                  
+                                <div class='ui-g-11' style='padding-top: 15px'>
+                                  <!-- <span class="ui-float-label" *ngIf="ques.FORMSTATUS==true">
+                                    <input id="{{selectsub.ID}}" name="{{selectsub.ID}}" type="text" size="30" pInputText formControlName='{{selectsub.ID}}'>
+                                    <label for="{{selectsub.ID}}">{{selectsub.QUESTION}}</label>
+                                  </span> -->
                                   <span class="ui-float-label" *ngIf="ques.ANSWER==true">
                                     <input id="{{selectsub.ID}}" name="{{selectsub.ID}}" type="text" size="30" pInputText formControlName='{{selectsub.ID}}'>
                                     <label for="{{selectsub.ID}}">{{selectsub.QUESTION}}</label>

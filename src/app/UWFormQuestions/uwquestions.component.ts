@@ -53,16 +53,16 @@ export class UwquestionsComponent implements OnInit {
           //UW category level
            question.UWQUESTIONS.forEach(q=>{
             q.ANSWER = formData[q.ID];
-                         
+
               //subquestion level
-              q.SUBQUESTIONS.forEach(s=>{
+              q.SUBQUESTION.forEach(s=>{
                 s.ANSWER = formData[s.ID];
 
                 //SELECT TYPE - no logic really needed yet
-                // if(q.ELEMENTTYPE == 'SELECT'){
-                //   q.ANSWER = formData[q.ID];
-                //   s.ANSWER = formData[s.ID];
-                //}
+                if(q.ELEMENTTYPE == 'SELECT'){
+                  //
+                  
+                }
  
                 //TEXT TYPE
                 if(q.ELEMENTTYPE == 'TEXT')
@@ -102,7 +102,7 @@ export class UwquestionsComponent implements OnInit {
         formGroup[q.ID] = new FormControl(q.ANSWER || '', validation);
 
           //sub question level    
-          q.SUBQUESTIONS.forEach(s=>{        
+          q.SUBQUESTION.forEach(s=>{        
             let subvalidation = (s.REQUIRED =='Y')? Validators.required:Validators.nullValidator;            
             //formGroup[s.ID] = new FormControl(s.ANSWER || ''), this.mapValidators(s.REQUIRED);
             formGroup[s.ID] = new FormControl(s.ANSWER || '', subvalidation);
