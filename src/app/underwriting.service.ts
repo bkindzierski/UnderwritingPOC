@@ -8,7 +8,7 @@ import { Http,HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormArray, AbstractControl } from '@angular/forms/src/model';
 
-import { UnderWritingQARoot } from '../app/classes/UnderWritingQARoot'
+import { UWQUESTIONROOT } from './classes/UWQUESTIONROOT'
 
 @Injectable()
 export class UnderwritingService {
@@ -20,7 +20,7 @@ export class UnderwritingService {
 
     getUWQuestions() {
         return this.http.get(this.url)
-            .map(res => <UnderWritingQARoot>res.json());
+            .map(res => <UWQUESTIONROOT>res.json());
     }
 
 }

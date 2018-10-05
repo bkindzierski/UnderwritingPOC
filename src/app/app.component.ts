@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 import { UnderwritingService } from './underwriting.service';
 
 import 'rxjs/add/operator/debounceTime';
-import { UnderWritingQARoot } from './classes/UnderWritingQARoot';
+import { UWQUESTIONROOT } from './classes/UWQUESTIONROOT';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class AppComponent {
   loaded: boolean = false;
   status: any;
    //
-   qaData: UnderWritingQARoot;
+   qaData: UWQUESTIONROOT;
 
   constructor(
     public underwritingService: UnderwritingService,
@@ -42,7 +42,7 @@ export class AppComponent {
   QAcheckData(){
     this.loaded =true;
     
-    //console.log('qaData: ' + JSON.stringify(this.qaData));
+    console.log('qaData: ' + JSON.stringify(this.qaData));
     
     // this.qaData.UWQUESTIONS.forEach(question => {
     //   console.log('CATEGORY: ' + question.CATEGORY);

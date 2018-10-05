@@ -1,10 +1,10 @@
-import { QUESTION } from '../classes/question'
+import { UWQUESTION } from './UWQUESTION'
 
 
-export class UWQUESTIONS {
+export class UWQUESTIONCATEGORY {
    
     CATEGORY: string = "";
-    QUESTIONS: QUESTION[];    
+    UWQUESTIONS: UWQUESTION[];    
     
     //options: {key: string, value: string}[] = [];
     

@@ -1,10 +1,10 @@
 
-import { UWQUESTIONS } from './UWQuestions'
+import { UWQUESTIONCATEGORY } from './UWQUESTIONCATEGORY'
 import { QUOTEPOLICYINFORMATION } from './QuotePolicyInfo'
+             
+export class UWQUESTIONROOT {
 
-export class UnderWritingQARoot {
-
-    UWQUESTIONS: UWQUESTIONS[];
+    UWQUESTIONCATEGORY: UWQUESTIONCATEGORY[];
     QUOTEPOLICYINFORMATION: QUOTEPOLICYINFORMATION;
     
     //options: {key: string, value: string}[] = [];

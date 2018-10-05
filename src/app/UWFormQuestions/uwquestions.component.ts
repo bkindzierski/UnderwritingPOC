@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 
-import { UnderWritingQARoot } from '../classes/UnderWritingQARoot';
+import { UWQUESTIONROOT } from '../classes/UWQUESTIONROOT';
 
 
 
@@ -12,7 +12,7 @@ import { UnderWritingQARoot } from '../classes/UnderWritingQARoot';
 })
 export class UwquestionsComponent implements OnInit {
 
-  @Input() qaData: UnderWritingQARoot;
+  @Input() qaData: UWQUESTIONROOT;
   @Input() form: FormGroup;
   
   valid=0;  
@@ -48,10 +48,10 @@ export class UwquestionsComponent implements OnInit {
       // });
 
        //root level
-       this.qaData.UWQUESTIONS.forEach(question => {
+       this.qaData.UWQUESTIONCATEGORY.forEach(question => {
      
           //UW category level
-           question.QUESTIONS.forEach(q=>{
+           question.UWQUESTIONS.forEach(q=>{
             q.ANSWER = formData[q.ID];
                          
               //subquestion level
@@ -67,9 +67,9 @@ export class UwquestionsComponent implements OnInit {
                 //TEXT TYPE
                 if(q.ELEMENTTYPE == 'TEXT')
                 {
-                  if(s.RULE && formData[q.ID])
+                  if(s.CONDITION && formData[q.ID])
                   {
-                      var post = s.RULE, logic = '<=', value = formData[q.ID];                      
+                      var post = s.CONDITION, logic = '<=', value = formData[q.ID];                      
                       this.evaluated = eval(post + logic + value);
                       //
                       (this.evaluated) ? q.FORMSTATUS = true : q.FORMSTATUS = false;
@@ -91,12 +91,12 @@ export class UwquestionsComponent implements OnInit {
   toFormGroup() {
     // setup the form
     const formGroup = {};
-
+    
     //root level
-    this.qaData.UWQUESTIONS.forEach(question => {
+    this.qaData.UWQUESTIONCATEGORY.forEach(question => {
       
       //UW category level
-      question.QUESTIONS.forEach(q=>{        
+      question.UWQUESTIONS.forEach(q=>{        
         let validation = (q.REQUIRED =='Y')? Validators.required:Validators.nullValidator;
         // formGroup[q.ID] = new FormControl(q.ANSWER || ''), this.mapValidators(q.REQUIRED);
         formGroup[q.ID] = new FormControl(q.ANSWER || '', validation);

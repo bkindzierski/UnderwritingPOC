@@ -12,19 +12,19 @@
 		"ENDORSEMENTDATE": 20180514,
 		"RECORDTYPE": 3
 	},
-	"UWQUESTIONS": [
+	"UWQUESTIONCATEGORY": [
 		{
 			"CATEGORY": "ACORD125",
-			"QUESTIONS": [
+			"UWQUESTIONS": [
 				{
 					"ID": 1,
 					"QUESTION": "ANNUAL REVENUES:",
 					"ORDER": 1,
 					"ELEMENTTYPE": "TEXT",
 					"ANSWER": "",
-					"RULE": "",
+					"CONDITION": "",
 					"REQUIRED":"Y",
-					"FORMSTATUS":"false",
+					"FORMSTATUS":null,
 					"DATATYPE": "N",
 					"DATALENGTH": 25,					
 					"SUBQUESTIONS": [
@@ -34,7 +34,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE":"250000",
+							"CONDITION":"250000",
 							"REQUIRED":"N",
 							"DATATYPE": "N",
 							"DATALENGTH": 25
@@ -47,7 +47,7 @@
 					"ORDER": 13,
 					"ELEMENTTYPE": "SELECT",
 					"ANSWER": "",
-					"RULE": "",
+					"CONDITION": "",
 					"REQUIRED":"N",
 					"DATATYPE": "A",
 					"DATALENGTH": 1,
@@ -58,7 +58,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": true,
+							"CONDITION": true,
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 25
@@ -69,7 +69,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": true,
+							"CONDITION": true,
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 25
@@ -82,7 +82,7 @@
 					"ORDER": 39,
 					"ELEMENTTYPE": "SELECT",
 					"ANSWER": "",
-					"RULE": "",
+					"CONDITION": "",
 					"REQUIRED":"N",
 					"DATATYPE": "A",
 					"DATALENGTH": 1,
@@ -92,16 +92,16 @@
 		},
 		{
 			"CATEGORY": "ACORD126",
-			"QUESTIONS": [				
+			"UWQUESTIONS": [				
 				{
 					"ID": 25,
 					"QUESTION": "ENTER ALL CLAIMS OR LOSSES OR OCCURRENCES",
 					"ORDER": 13,
 					"ELEMENTTYPE": "TEXT",
 					"ANSWER": "",
-					"RULE": "1",
+					"CONDITION": "1",
 					"REQUIRED":"Y",
-					"FORMSTATUS":"false",
+					"FORMSTATUS":null,
 					"DATATYPE": "A",
 					"DATALENGTH": 25,
 					"SUBQUESTIONS": [
@@ -111,7 +111,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": "1",
+							"CONDITION": "1",
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 25
@@ -122,7 +122,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": "1",
+							"CONDITION": "1",
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 25
@@ -133,7 +133,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": "1",
+							"CONDITION": "1",
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 25
@@ -144,7 +144,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": "1",
+							"CONDITION": "1",
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 25
@@ -155,7 +155,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": "1",
+							"CONDITION": "1",
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 25
@@ -166,7 +166,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": "1",
+							"CONDITION": "1",
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 25
@@ -177,7 +177,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": "1",
+							"CONDITION": "1",
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 25
@@ -190,7 +190,7 @@
 					"ORDER": 10,
 					"ELEMENTTYPE": "SELECT",
 					"ANSWER": false,
-					"RULE": "",
+					"CONDITION": "",
 					"REQUIRED":"N",
 					"DATATYPE": "A",
 					"DATALENGTH": 1,
@@ -201,7 +201,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": true,
+							"CONDITION": true,
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 12
@@ -212,7 +212,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": true,
+							"CONDITION": true,
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 12
@@ -223,7 +223,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": true,
+							"CONDITION": true,
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 12
@@ -234,7 +234,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": true,
+							"CONDITION": true,
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 12
@@ -245,7 +245,7 @@
 							"ORDER": 1,
 							"ELEMENTTYPE": "TEXT",
 							"ANSWER": "",
-							"RULE": true,
+							"CONDITION": true,
 							"REQUIRED":"N",
 							"DATATYPE": "A",
 							"DATALENGTH": 12
@@ -258,7 +258,7 @@
 					"ORDER": 10,
 					"ELEMENTTYPE": "DROPDOWN",
 					"ANSWER": "",
-					"RULE": "",
+					"CONDITION": "",
 					"REQUIRED":"N",
 					"DATATYPE": "A",
 					"DATALENGTH": 1,
@@ -279,7 +279,7 @@
 					"ORDER": 139,
 					"ELEMENTTYPE": "RADIO",
 					"ANSWER": "",
-					"RULE": "",
+					"CONDITION": "",
 					"REQUIRED":"N",
 					"DATATYPE": "A",
 					"DATALENGTH": 1,

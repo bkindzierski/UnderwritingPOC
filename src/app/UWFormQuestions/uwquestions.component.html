@@ -2,11 +2,11 @@
 <div>
     <form (ngSubmit)="onSubmit()" [formGroup]="form">
   
-      <div *ngFor='let item of qaData.UWQUESTIONS;' class="form-row">
+      <div *ngFor='let item of qaData.UWQUESTIONCATEGORY;' class="form-row">
           
         <p> <strong>Category: </strong>{{ item.CATEGORY }} </p>
           
-              <div class='form-row' *ngFor="let ques of item.QUESTIONS; let idx = index;" >
+              <div class='form-row' *ngFor="let ques of item.UWQUESTIONS; let idx = index;" >
                   <div class='ui-g-12 ui-sm-12' >
                     {{idx +1}}. 
                     <span *ngIf='ques.ELEMENTTYPE == "TEXT"' style='clear: both;'>                        

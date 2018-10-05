@@ -1,19 +1,23 @@
 
-export class QUESTION {
+export class UWQUESTION {
     
     ID: number;
     QUESTION: string;
     QUESORDER: number;
     ELEMENTTYPE: string;
     ANSWER: string;
-    RULE: string;
+    CONDITION: string;
     REQUIRED:string;    
     DATATYPE:number;
     DATALENGTH:number;
-    SUBQUESTIONS: QUESTION[];
+    SUBQUESTIONS: UWQUESTION[];
     OPTIONS:any[];
     FORMSTATUS:boolean;
-  
+    LAYOUT: string;
+    FASTTRACK:string;
+    TAB:string;
+    REFERRALS:string;
+
     // constructor(options: {
     //     id?: string,
     //     question?: string,
