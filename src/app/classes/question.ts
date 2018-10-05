@@ -3,17 +3,16 @@ export class QUESTION {
     
     ID: number;
     QUESTION: string;
-    ORDER: number;
+    QUESORDER: number;
     ELEMENTTYPE: string;
     ANSWER: string;
     RULE: string;
-    REQUIRED:string;
-    FORMSTATUS:boolean;
+    REQUIRED:string;    
     DATATYPE:number;
     DATALENGTH:number;
-    OPTIONS:any[];
     SUBQUESTIONS: QUESTION[];
-    
+    OPTIONS:any[];
+    FORMSTATUS:boolean;
   
     // constructor(options: {
     //     id?: string,
@@ -32,12 +31,11 @@ export class QUESTION {
     //     this.question = options.question;
     //     this.order= options.order;
     //     this.elementType= options.elementType;
-    //     this.answer= options.answer;
+    //     this.answer= options.answer; 
     //     this.rule= options.rule;
     //     this.datatype= options.datatype;
     //     this.datalength= options.datalength;
     //     this.subQuestions =options.subQuestions;
-
     // }
 
   }

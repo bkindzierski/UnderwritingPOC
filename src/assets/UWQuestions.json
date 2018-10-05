@@ -24,7 +24,7 @@
 					"ANSWER": "",
 					"RULE": "",
 					"REQUIRED":"Y",
-					"FORMSTATUS":"",
+					"FORMSTATUS":"false",
 					"DATATYPE": "N",
 					"DATALENGTH": 25,					
 					"SUBQUESTIONS": [
@@ -101,7 +101,7 @@
 					"ANSWER": "",
 					"RULE": "1",
 					"REQUIRED":"Y",
-					"FORMSTATUS":"",
+					"FORMSTATUS":"false",
 					"DATATYPE": "A",
 					"DATALENGTH": 25,
 					"SUBQUESTIONS": [
