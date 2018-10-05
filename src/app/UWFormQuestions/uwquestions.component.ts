@@ -60,8 +60,7 @@ export class UwquestionsComponent implements OnInit {
 
                 //SELECT TYPE - no logic really needed yet
                 if(q.ELEMENTTYPE == 'SELECT'){
-                  //
-                  
+                  //let condition: string[] = s.CONDITION.split("|");
                 }
  
                 //TEXT TYPE
@@ -69,7 +68,8 @@ export class UwquestionsComponent implements OnInit {
                 {
                   if(s.CONDITION && formData[q.ID])
                   {
-                      var post = s.CONDITION, logic = '<=', value = formData[q.ID];                      
+                      //let condition: string[] = s.CONDITION.split("|");
+                      let post = s.CONDITION, logic = '<=', value = formData[q.ID];                      
                       this.evaluated = eval(post + logic + value);
                       //
                       (this.evaluated) ? q.FORMSTATUS = true : q.FORMSTATUS = false;
