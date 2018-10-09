@@ -25,5 +25,5 @@ export class UnderwritingService {
         return this.http.get(this.url)
             .map(res => <UWQUESTIONROOT>res.json());
     }
-
+    
 }
